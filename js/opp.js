@@ -1,33 +1,19 @@
-const track = document.querySelector('.image-carousel .carousel-track');
-const prevBtn = document.querySelector('.image-carousel .carousel-nav.prev');
-const nextBtn = document.querySelector('.image-carousel .carousel-nav.next');
-const items = document.querySelectorAll('.image-carousel .carousel-item');
-let visibleItems = window.innerWidth <= 600 ? 1 : 3;
-let currentIndex = 0;
+const slides = document.querySelectorAll('.carousel_slide');
+const prev = document.querySelector('.carousel_btn.prev');
+const next = document.querySelector('.carousel_btn.next');
+let current = 0;
 
-function updateCarousel() {
-  const itemWidth = items[0].offsetWidth;
-  track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
 }
 
-nextBtn.addEventListener('click', () => {
-  if (currentIndex < items.length - visibleItems) {
-    currentIndex++;
-    updateCarousel();
-  }
+prev.addEventListener('click', () => {
+    current = (current === 0) ? slides.length - 1 : current - 1;
+    showSlide(current);
 });
 
-prevBtn.addEventListener('click', () => {
-  if (currentIndex > 0) {
-    currentIndex--;
-    updateCarousel();
-  }
+next.addEventListener('click', () => {
+    current = (current === slides.length - 1) ? 0 : current + 1;
+    showSlide(current);
 });
-
-window.addEventListener('resize', () => {
-  visibleItems = window.innerWidth <= 600 ? 1 : 3;
-  currentIndex = 0;
-  updateCarousel();
-});
-
-updateCarousel();
