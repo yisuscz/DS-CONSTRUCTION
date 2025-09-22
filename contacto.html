@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +7,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
     <header class="hero">
         <nav class="nav container" id="nav">
-            
             <div class="nav_logo">
-            <img src="imagenes/logotipo.svg" alt="">
+                <img src="imagenes/logotipo.svg" alt="">
             </div>
 
             <ul class="nav_links">
@@ -40,8 +38,47 @@
                 <img src="imagenes/x.png" alt="Cerrar" class="nav_icon">
             </a>
         </nav>
-    </header>
+    </header>    
 
-    <script src="js/opp.js"></script>
+    <div class="contacto-contenido">
+        <section class="encabezado">
+            <h1>Contáctanos</h1>
+            <p>¿Tienes preguntas sobre propiedades, alquileres o ventas? Estamos aquí para ayudarte.</p>
+        </section>
+
+        <main>
+            <section class="formulario">
+                <form action="#" method="post">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required />
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" />
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+                <button type="submit">Enviar mensaje</button>
+                </form>
+            </section>
+
+            <section class="info-contacto">
+                <h2>Información de contacto</h2>
+                <p><strong>Dirección:</strong> Plaza Mundo Apopa, San Salvador</p>
+                <p><strong>Teléfono:</strong> +503 7583-3642</p>
+                <p><strong>Email:</strong> chusoelmacho11@gmail.com</p>
+                <p><strong>Horario:</strong> 24/7 online</p>
+            </section>
+        </main>
+    </div>
+  
+
+    <footer class="footer">
+        <p>&copy; 2025 DS CONSTRUCTION — Todos los derechos reservados.</p>
+    </footer>
+
 </body>
 </html>
