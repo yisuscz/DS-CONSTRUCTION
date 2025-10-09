@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background-color: #f5faff;
+  color: #333;
+}
+
+header {
+  background-color: #2B2B2B;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  flex-wrap: wrap;
+}
+
+nav .logo img {
+  height: 70px;
+  width: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffcc00;
+}
+
+footer {
+  background-color: #2B2B2B;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 15px;
+  }
+
+  nav .logo img {
+    height: 60px;
+  }
+
+  nav ul {
+    gap: 10px;
+  }
+}
+
+.contenido {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.info-servicio h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #004080;
+}
+
+.info-servicio h2 {
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #336699;
+}
+
+.info-servicio p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.info-servicio ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.info-servicio ul li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.info-servicio ul li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #007b33;
+}
+
+.contacto-servicio {
+  margin-top: 30px;
+  background-color: #e6f0ff;
+  padding: 15px 20px;
+  border-left: 5px solid #004080;
+}
+
+.contacto-servicio a {
+  color: #004080;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contacto-servicio a:hover {
+  text-decoration: underline;
+}
